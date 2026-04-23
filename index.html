@@ -5,16 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishak Skomorac | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
     <!-- Povezivanje sa CSS-om -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <a href="#hero" class="logo">
+                <img src="public/favicon.svg" alt="Ishak Logo" style="height: 40px; vertical-align: middle;">
+            </a>
 
-    <h1>Dobrodošli na moju prvu web stranicu</h1>
-    <p>Ovo je početak mog maturskog projekta.</p>
+            <ul class="nav-links">
+                <li><a href="#hero">Početna</a></li>
+                <li><a href="#about">O meni</a></li>
+                <li><a href="#skills">Vještine</a></li>
+                <li><a href="#projects">Projekti</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <!-- Hamburger meni za mobilne (poglavlje 6.4) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Povezivanje sa JavaScript-om (na dnu, da ne usporava učitavanje) -->
+    <main>
+        <!-- Sekcija: Početna (Hero) -->
+        <section id="hero" class="tab-content active">
+            <h1>Ishak Skomorac</h1>
+            <p>Elektrotehničar računarske tehnike i automatike</p>
+            <p>Dobrodošli u moj svijet programiranja i dizajna.</p>
+        </section>
+
+        <!-- Sekcija: O meni -->
+        <section id="about" class="tab-content">
+            <h2>O meni</h2>
+            <p>Učenik sam Srednje elektrotehničke škole u Zenici. Ovaj rad je kruna mog srednjoškolskog obrazovanja.</p>
+        </section>
+
+        <!-- Sekcija: Vještine -->
+        <section id="skills" class="tab-content">
+            <h2>Vještine</h2>
+            <div class="skills-list">
+                <p>HTML5</p>
+                <p>CSS3</p>
+                <p>JavaScript</p>
+            </div>
+        </section>
+
+        <!-- Sekcija: Projekti -->
+        <section id="projects" class="tab-content">
+            <h2>Moji projekti</h2>
+            <p>Ovdje će biti prikazani moji radovi.</p>
+        </section>
+
+        <!-- Sekcija: Kontakt -->
+        <section id="contact" class="tab-content">
+            <h2>Kontakt</h2>
+            <p>Možete me kontaktirati putem forme ili društvenih mreža.</p>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Ishak Skomorac. Sva prava zadržana.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 
