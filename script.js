@@ -1,6 +1,3 @@
-// Testna poruka u konzoli browsera
-console.log("JavaScript je uspješno povezan!");
-
 // 1. Pronalazimo sve linkove u navigaciji i sve sekcije (tabove)
 const navLinks = document.querySelectorAll('.nav-links a, .logo');
 const tabContents = document.querySelectorAll('.tab-content');
@@ -26,8 +23,6 @@ navLinks.forEach(link => {
         // (Opcionalno) Možemo dodati i stil da se vidi koji je link trenutno aktivan
         navLinks.forEach(l => l.classList.remove('active-link'));
         this.classList.add('active-link');
-
-        console.log("Prikazujem sekciju: " + targetId);
     });
 });
 
