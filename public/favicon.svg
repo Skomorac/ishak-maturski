@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Gradijent za 3D efekt kugle -->
+    <radialGradient id="sphereGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#2A3441" />
+      <stop offset="100%" stop-color="#05080C" />
+    </radialGradient>
+  </defs>
+
+  <!-- Kugla -->
+  <circle cx="50" cy="50" r="48" fill="url(#sphereGrad)" />
+  
+  <!-- Manje "S" (skalirano i centrirano) -->
+  <path d="M62 38 H44 A8 8 0 0 0 44 54 H56 A8 8 0 0 1 56 70 H38" 
+        stroke="white" 
+        stroke-width="8" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        fill="none" 
+        opacity="0.9" />
+
+  <!-- Suptilni odsjaj na vrhu (za dodatni premium feel) -->
+  <ellipse cx="35" cy="30" rx="12" ry="8" fill="white" opacity="0.1" />
+</svg>
