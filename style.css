@@ -8,30 +8,45 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    padding: 20px;
     background-color: #f4f4f4;
+
+    /* Sticky Footer logika */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Centralni dio stranice */
+main {
+    flex: 1;
+    /* Gura footer na dno */
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h1 {
     color: #333;
 }
 
-/* Osnovni stil za sve sekcije */
+/* Osnovni stil za sve sekcije (tabove) */
 .tab-content {
     display: none;
-    /* Ovo SAKRIVA sekciju */
-    padding: 50px 20px;
+    padding: 40px 0;
     animation: fadeIn 0.5s ease;
-    /* Mala animacija za ljepši prelaz */
+    text-align: center;
 }
 
-/* Stil koji se primjenjuje SAMO kada sekcija dobije klasu .active */
 .tab-content.active {
-    display: block;
-    /* Ovo PRIKAZUJE sekciju */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    /* Da sekcija zauzima bar 60% visine */
 }
 
-/* Jednostavna animacija */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -44,7 +59,7 @@ h1 {
     }
 }
 
-/* Kontejner za navigaciju */
+/* --- NAVIGACIJA --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -57,27 +72,22 @@ h1 {
     z-index: 1000;
 }
 
-/* Logo stil */
 .logo {
     display: block;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
+    height: 40px;
     text-decoration: none;
 }
 
-.logo span {
-    color: #007bff;
+.logo img {
+    height: 100%;
 }
 
-/* Horizontalna lista (Flexbox magija) */
 .nav-links {
     display: flex;
     list-style: none;
     gap: 10px;
 }
 
-/* Stil svakog pojedinačnog taba */
 .nav-links a {
     text-decoration: none;
     color: #555;
@@ -88,20 +98,21 @@ h1 {
     border-bottom: 3px solid transparent;
 }
 
-/* Hover efekat */
+.active-link {
+    color: #007bff !important;
+    border-bottom: 3px solid #007bff !important;
+}
+
+.logo.active-link {
+    border-bottom: none !important;
+}
+
 .nav-links a:hover {
     background-color: #e9ecef;
     color: #007bff;
 }
 
-/* STIL ZA AKTIVNI TAB */
-.active-link {
-    color: #007bff !important;
-    border-bottom: 3px solid #007bff !important;
-    background-color: #f8f9fa;
-}
-
-/* Hamburger - po defaultu sakriven na desktopu */
+/* --- MOBILNI PRIKAZ --- */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -116,16 +127,13 @@ h1 {
     transition: 0.3s;
 }
 
-/* --- MOBILNI PRIKAZ (Media Query) --- */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-        /* Pokaži hamburger na mobilnom */
     }
 
     .nav-links {
         display: none;
-        /* Sakrij horizontalne tabove na mobilnom */
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -138,11 +146,19 @@ h1 {
 
     .nav-links.active {
         display: flex;
-        /* Pokaži listu kad je aktivna na mobilnom */
     }
 
     .nav-links a {
         border-radius: 8px;
         border-bottom: none;
     }
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
 }
