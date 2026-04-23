@@ -119,11 +119,13 @@ h1 {
 /* --- MOBILNI PRIKAZ (Media Query) --- */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Pokaži hamburger na mobilnom */
+        display: flex;
+        /* Pokaži hamburger na mobilnom */
     }
 
     .nav-links {
-        display: none; /* Sakrij horizontalne tabove na mobilnom */
+        display: none;
+        /* Sakrij horizontalne tabove na mobilnom */
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -131,11 +133,12 @@ h1 {
         width: 100%;
         background-color: #fff;
         padding: 20px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
-        display: flex; /* Pokaži listu kad je aktivna na mobilnom */
+        display: flex;
+        /* Pokaži listu kad je aktivna na mobilnom */
     }
 
     .nav-links a {
